@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank account details</title>
+    <!-- daisy ul css -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <h1 class="text-5xl font-bold text-center my-10">Let's Get some <span class="text-purple-700">Money</span>!!!!!!
+    </h1>
+    <!-- Deposit and withdraw and total balance display -->
+    <div class="grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-5 w-9/12 mx-auto text-white">
+        <div class="bg-green-400 px-5 py-8 rounded-md">
+            <h2 class="text-3xl font-bold mb-3">Deposit</h2>
+            <p class="text-3xl ">$<span id="deposit-total">00</span></p>
+        </div>
+        <div class="bg-red-400 px-5 py-8 rounded-md">
+            <h2 class="text-3xl font-bold mb-3">Withdraw</h2>
+            <p class="text-3xl ">$<span id="withdraw-total">00</span></p>
+        </div>
+        <div class="bg-green-600 px-5 py-8 rounded-md">
+            <h2 class="text-3xl font-bold mb-3">Total Balance</h2>
+            <p class="text-3xl ">$<span id="total-balance">1240</span></p>
+        </div>
+    </div>
+    <!-- Deposit and withdraw field start -->
+    <div class="grid grid-cols-1 gap-y-3 md:grid-cols-2 md:gap-5 w-9/12 mx-auto mt-8 text-white">
+        <!-- deposit field -->
+        <div class="bg-lime-400 text-center py-8 rounded-md">
+            <h2 class="text-3xl font-bold ">Deposit Amount</h2>
+            <input id="deposit-input-field" class="block mx-auto my-5 py-1 px-2 rounded-md text-black" type="text">
+            <button id="deposit-btn" class="btn bg-lime-700 hover:bg-lime-900 text-white border-0">Deposit</button>
+        </div>
+        <!-- Withdraw field -->
+        <div class="bg-purple-400 text-center py-8 rounded-md">
+            <h2 class="text-3xl font-bold">Withdraw Amount</h2>
+            <input id="withdraw-input-field" class="block mx-auto my-5 py-1 px-2 text-black rounded-md" type="text">
+            <button id="withdraw-btn"
+                class="btn bg-purple-700 hover:bg-purple-900 text-white border-0">Withdraw</button>
+        </div>
+
+    </div>
+    <!-- Deposit and withdraw field End -->
+    <div class="text-xl text-center font-bold mt-16 bg-purple-600 py-2 text-white">
+        Designed and developed by <span class="hover:text-green-400">MM IT CENTER</span>
+    </div>
+
+
+
+
+    
+    <script src="deposit.js"></script>
+    <script src="withdraw.js"></script>
+</body>
+
+</html>
