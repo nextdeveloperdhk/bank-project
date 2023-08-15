@@ -8,15 +8,22 @@ document.getElementById('withdraw-btn').addEventListener('click', function(){
         alert('Please input any amount.');
         return;
     }
+   
+    const totalBalance = document.getElementById('total-balance');
+    const totalBalanceAmount = parseFloat(totalBalance.innerText);
     
+    //Validation
+    if(newWithdrawAmount > totalBalanceAmount){
+        alert('eto Taka nai');
+        return;
+    }
 
     const withdrawTotal = document.getElementById('withdraw-total');
     const withdrawTotalAmount = parseFloat(withdrawTotal.innerText);
     const previousWithdrawAmount = withdrawTotalAmount + newWithdrawAmount;
     withdrawTotal.innerText = previousWithdrawAmount ;
 
-    const totalBalance = document.getElementById('total-balance');
-    const totalBalanceAmount = parseFloat(totalBalance.innerText);
+
     const totalWithdrawBalanceAmount = totalBalanceAmount - newWithdrawAmount;
     totalBalance.innerText = totalWithdrawBalanceAmount;
 })
